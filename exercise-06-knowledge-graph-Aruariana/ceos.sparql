@@ -1,0 +1,9 @@
+SELECT ?person ?gender ?date_of_birth WHERE {
+    ?company <chief_executive_officer> ?person .
+    ?person <place_of_birth> ?city .
+    ?city <country> <United_States> .
+    ?person <date_of_birth> ?date_of_birth .
+    ?person <sex_or_gender> ?gender
+}
+ORDER BY DESC(?date_of_birth)
+LIMIT 10
